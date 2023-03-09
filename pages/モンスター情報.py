@@ -11,4 +11,4 @@ if st.button('ピクシー種'):
     stock=st.selectbox(label='ピクシー種一覧',
                        options=Pixies)
     df_tgt=df.loc[stock]
-    st.dataframe(df_tgt)
+    st.write(df_tgt)
