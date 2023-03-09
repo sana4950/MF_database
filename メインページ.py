@@ -1,2 +1,3 @@
 import streamlit as st
-st.title('LINE モンスターファーム wiki ～気ままに更新～')
+st.title('LINE モンスターファーム wiki')
+st.subheader('～気ままに更新～')

@@ -9,7 +9,6 @@ df=pd.read_csv('MF_database.csv',index_col='モンスター名')
 if st.button('ピクシー種'):
     ピクシー種=['ピクシー','ミント','スエコ','エンジェル','リリム']
     stock=st.selectbox(label='ピクシー種一覧',
-                       options=ピクシー種
-                       default=['ピクシー'])
+                       options=ピクシー種)
     df_tgt=df.loc[stock]
     st.dataframe(df_tgt)
