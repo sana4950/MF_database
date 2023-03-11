@@ -13,4 +13,4 @@ if st.button('ピクシー種'):
     data_set=tgt.loc(stocks)
 
     #status_1
-    st.write(data_set.filter[items=stocks,axis=0].filter(items=['レア','メイン','サブ']))
+    st.write(data_set.filter(items=stocks,axis=0).filter(items=['レア','メイン','サブ']))
