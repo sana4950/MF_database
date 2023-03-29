@@ -7,10 +7,10 @@ st.subheader('種族一覧')
 df=pd.read_csv('MF_database.csv',encoding="utf-8",index_col='モンスター名')
 
 #ピクシー種ボタン作成していく
-if st.button('ピクシー種'):
-    tgt=(df['メイン']=='ピクシー')
-    stocks=st.selectbox(label='ピクシー種',options=tgt.index)
-    data_set=tgt.loc(stocks)
+if st.button(label='ピクシー種'):
+    family=df(df.at['メイン']=='ピクシー')
+    stock=st.selectbox(label='ピクシー種一覧',options=family)
+    tgt=df.loc(stock)
 
     #status_1
-    st.write(data_set.filter(items=stocks,axis=0).filter(items=['レア','メイン','サブ']))
+    st.write(tgt.filter(items=stocks,axis=0).filter(items=['レア','メイン','サブ']))
