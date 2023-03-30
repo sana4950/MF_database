@@ -14,12 +14,15 @@ if family_select:
     if 'push_1' not in st.session_state:
         st.session_state.push_1=False
     #select作成
-    stock=st.session_state.selectbox(label='ピクシー種一覧',options=family)
+    stock=st.selectbox(label='ピクシー種一覧',options=family)
+    if 'push_2' not in st.session_state:
+        st.session_state.push_1=False
     if stock:
         st.session_state.push_1=True
-    #Trueなら以下処理に入る
+        #Trueなら以下処理に入る
         if st.session_state.push_1:
             #列でデータ分割表示
+            st.write(st.session_state['push_1'])
             cols=st.columns(2)
             #左列表示
             with cols[0].container():
