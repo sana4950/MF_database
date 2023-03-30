@@ -12,5 +12,5 @@ if st.button(label='ピクシー種'):
     stock=st.selectbox(label='ピクシー種一覧',options=family)
     tgt=df.loc[stock]
 
-    #status_1
-    st.write(tgt.filter(items=stock,axis=0).filter(items=['レア','メイン','サブ']))
+#status_1
+st.write(tgt.filter(items=stock,axis=0).filter(items=['レア','メイン','サブ']))
