@@ -14,6 +14,11 @@ if st.button(label='ピクシー種'):
 
     #status_1
     with st.container():
-        st.dataframe(tgt.filter(items=['レア','メイン']))
+        st.dataframe(tgt.filter(items=['レア','メイン','サブ']))
     #status_2
-
+    with st.container():
+        st.dataframe(tgt.filter(items=['ライフ','ちから','かしこさ','命中','回避','丈夫さ']))
+    #status_3
+    with st.container():
+        st.dataframe(tgt.filter(items=['初期技1','初期技2']))
+    #status_4
