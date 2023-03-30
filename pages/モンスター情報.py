@@ -15,8 +15,8 @@ if st.button(label='ピクシー種'):
     cols=st.colmns(2)
     #status_1
     with cols[1].container():
-        .dataframe(tgt.filter(items=['レア','メイン','サブ']).filter(items=[stock],axis=0))
+        dataframe(tgt.filter(items=['レア','メイン','サブ']).filter(items=[stock],axis=0))
     #status_2
     with cols[2].container():
-        .dataframe(tgt.filter(items=['ライフ','ちから','かしこさ']).filter(items=[stock],axis=0))
+        dataframe(tgt.filter(items=['ライフ','ちから','かしこさ']).filter(items=[stock],axis=0))
 
