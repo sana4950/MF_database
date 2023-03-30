@@ -13,4 +13,4 @@ if st.button(label='ピクシー種'):
     tgt=df.loc[stock]
 
 #status_1
-    st.write(tgt.filter(items=stock,axis=0).filter(items=['レア','メイン','サブ']))
+    st.write(tgt)
