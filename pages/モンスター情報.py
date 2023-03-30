@@ -12,13 +12,13 @@ df=pd.read_csv('MF_database.csv',index_col='モンスター名')
 family_select=st.button(label='ピクシー種')
 if family_select:
     if 'push_1' not in st.session_state:
-        st.session_state.push_1=False
+        st.session_state.push_1=0
     #select作成
-    stock=st.session_state.selectbox(label='ピクシー種一覧',options=family)
+    stock=st.selectbox(label='ピクシー種一覧',options=family)
     if stock:
-        st.session_state.push_1=True
+        st.session_state.push_1=1
     #Trueなら以下処理に入る
-    if st.session_state.push_1=True:
+    if st.session_state.push_1=1:
         #列でデータ分割表示
         cols=st.columns(2)
         #左列表示
