@@ -12,7 +12,7 @@ if st.button(label='ピクシー種'):
     stock=st.selectbox(label='ピクシー種一覧',options=family)
     tgt=df.loc[stock]
 
-    cols=st.colmns(2)
+    cols=st.columns(2)
     #status_1
     with cols[1].container():
         dataframe(tgt.filter(items=['レア','メイン','サブ']).filter(items=[stock],axis=0))
