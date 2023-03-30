@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
- family=['ピクシー','ミント','スエコ']
+family=['ピクシー','ミント','スエコ']
 
 st.title('モンスター情報DB')
 st.subheader('種族一覧')
