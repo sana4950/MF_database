@@ -14,8 +14,6 @@ if st.button(label='ピクシー種'):
 
     #status_1
     with st.container():
-        st.dataframe(tgt.filter(items=['レア','メイン','サブ']).filter(items=[stock],axis=0))
+        st.dataframe(tgt.filter(items=[stock],axis=0).filter(items=['レア','メイン']))
     #status_2
-    with st.container():
-        st.dataframe(tgt.filter(items=['ライフ','ちから','かしこさ']).filter(items=[stock],axis=0))
 
