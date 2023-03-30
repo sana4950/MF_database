@@ -14,11 +14,11 @@ if st.button(label='ピクシー種'):
 
     #status_1
     with st.container():
-        st.dataframe(df[stock].filter(items=['レア','メイン','サブ']))
+        st.dataframe(df.loc[stock].filter(items=['レア','メイン','サブ']))
     #status_2
     with st.container():
-        st.dataframe(df[stock].filter(items=['ライフ','ちから','かしこさ','命中','回避','丈夫さ']))
+        st.dataframe(df.loc[stock].filter(items=['ライフ','ちから','かしこさ','命中','回避','丈夫さ']))
     #status_3
     with st.container():
-        st.dataframe(df[stock].filter(items=['初期技1','初期技2']))
+        st.dataframe(df.loc[stock].filter(items=['初期技1','初期技2']))
     #status_4
