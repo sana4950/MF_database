@@ -9,7 +9,7 @@ df=pd.read_csv('MF_database.csv',index_col='モンスター名')
 #ピクシー種ボタン作成していく
 if st.button(label='ピクシー種'):
     family=['ピクシー','ミント','スエコ']
-    stock=st.selectbox(label='ピクシー種一覧',options=family,default=['ピクシー'])
+    stock=st.selectbox(label='ピクシー種一覧',options=family)
     tgt=df.loc[stock]
 
 #status_1
