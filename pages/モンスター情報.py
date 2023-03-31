@@ -16,24 +16,22 @@ def page_p():
     st.title(ピクシー種)
     stock=st.radio(label='モンスター名選択',options=ピクシー種)
     ###データ表示
-    #エラーチェック
-    st.write(df[stock])
     #列でデータ分割表示
     #cols=st.columns(2)
 
     #左列表示
-    #with cols[0].container():
+    with cols[0].container():
     #status_1
-    #st.write(df.loc[stock].filter(items=['レア','メイン','サブ']))
+    st.write(df.loc[stock].filter(items=['レア','メイン','サブ']))
     #status_2
-    #st.write(df.loc[stock].filter(items=['ライフ','ちから','かしこさ','命中','回避','丈夫さ']))
+    st.write(df.loc[stock].filter(items=['ライフ','ちから','かしこさ','命中','回避','丈夫さ']))
 
     #右列表示
-    #with cols[1].container():
+    with cols[1].container():
     #status_3
-    #st.write(df.loc[stock].filter(items=['初期技1','初期技2']))
+    st.write(df.loc[stock].filter(items=['初期技1','初期技2']))
     #status_4
-    #st.write(df.loc[stock].filter(items=['登録可能技1','登録可能技2']))
+    st.write(df.loc[stock].filter(items=['登録可能技1','登録可能技2']))
 
 #
 selected_family=st.sidebar.radio('種族選択',種族名一覧)
