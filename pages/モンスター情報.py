@@ -12,7 +12,7 @@ st.subheader('種族一覧')
 df=pd.read_csv('MF_database.csv',index_col='モンスター名')
 
 #ピクシー種ボタン作成していく
-def page_p()
+def page_p():
     st.title(ピクシー種)
     stock=st.radio(options=ピクシー種)
     ###データ表示
@@ -39,3 +39,5 @@ selected_family=st.sidebar.radio('種族選択',種族名一覧)
 #
 if selected_family=='ピクシー種':
     page_p()
+else:
+    pass#何もしない処理
