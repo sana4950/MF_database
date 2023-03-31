@@ -17,7 +17,7 @@ def page_p():
     stock=st.radio(label='モンスター名選択',options=ピクシー種)
     ###データ表示
     #列でデータ分割表示
-    #cols=st.columns(2)
+    cols=st.columns(2)
 
     #左列表示
     with cols[0].container():
