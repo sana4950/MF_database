@@ -14,7 +14,7 @@ df=pd.read_csv('MF_database.csv',index_col='モンスター名')
 #ピクシー種ボタン作成していく
 def page_p():
     st.title(ピクシー種)
-    stock=st.radio(options=ピクシー種)
+    stock=st.radio(label='モンスター名選択',options=ピクシー種)
     ###データ表示
     #エラーチェック
     st.write(df[stock])
