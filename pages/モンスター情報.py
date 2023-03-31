@@ -1,36 +1,41 @@
 import streamlit as st
 import pandas as pd
 
-family=['ピクシー','ミント','スエコ']
+#リスト作成
+種族名一覧=['ピクシー種','スエゾー種','ゴーレム種']
+ピクシー種=['ピクシー','ミント','スエコ']
 
 st.title('モンスター情報DB')
 st.subheader('種族一覧')
 
+#データ抽出
 df=pd.read_csv('MF_database.csv',index_col='モンスター名')
 
 #ピクシー種ボタン作成していく
-family_select=st.button(label='ピクシー種')
-if family_select:
-    if 'push_1' not in st.session_state:
-        st.session_state.push_1==False
-    #select作成
-    stock=st.selectbox(label='ピクシー種一覧',options=family)
-    if stock:
-        st.session_state.push_1==True
-        #Trueなら以下処理に入る
-        if st.session_state.push_1==True:
-            #列でデータ分割表示
-            st.write(st.session_state['push_1'])
-            cols=st.columns(2)
-            #左列表示
-            with cols[0].container():
-                #status_1
-                st.write(df.loc[stock].filter(items=['レア','メイン','サブ']))
-                #status_2
-                st.write(df.loc[stock].filter(items=['ライフ','ちから','かしこさ','命中','回避','丈夫さ']))
-            #右列表示
-            with cols[1].container():
-                #status_3
-                st.write(df.loc[stock].filter(items=['初期技1','初期技2']))
-                #status_4
-                st.write(df.loc[stock].filter(items=['登録可能技1','登録可能技2']))
+def page_p()
+    st.title(ピクシー種)
+    stock=st.radio(options=ピクシー種)
+    ###データ表示
+    #列でデータ分割表示
+    cols=st.columns(2)
+
+    #左列表示
+    with cols[0].container():
+    #status_1
+    st.write(df.loc[stock].filter(items=['レア','メイン','サブ']))
+    #status_2
+    st.write(df.loc[stock].filter(items=['ライフ','ちから','かしこさ','命中','回避','丈夫さ']))
+
+    #右列表示
+    with cols[1].container():
+    #status_3
+    st.write(df.loc[stock].filter(items=['初期技1','初期技2']))
+    #status_4
+    st.write(df.loc[stock].filter(items=['登録可能技1','登録可能技2']))
+
+#
+selected_family=st.sidebar.radio('種族選択',種族名一覧)
+
+#
+if selected_family=='ピクシー種'
+    page_p()
