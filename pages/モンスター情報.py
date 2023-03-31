@@ -37,5 +37,5 @@ def page_p()
 selected_family=st.sidebar.radio('種族選択',種族名一覧)
 
 #
-if selected_family=='ピクシー種'
+if selected_family=='ピクシー種':
     page_p()
